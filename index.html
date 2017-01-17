@@ -14,14 +14,75 @@
 </head>
 <body>
 	
+<div class="jumbotron">
+ <h1 class="text-center"> <bold>It's Train Time!</bold></h1>
+</div>
 
+<div class="panel panel-primary">
+ <div class="panel-heading">Current Train Schedule </div>
+
+ <!-- Table -->
+ <table class="table table-hover">
+    <thead>
+     <tr>
+       <th>Train Name</th>
+       <th>Destination</th>
+       <th>Frequency (min)</th>
+       <th>Next Arrival</th>
+       <th>Minutes Away</th>
+     </tr>
+   </thead>
+   <tbody id="displayTrains">
+     
+   </tbody>
+ </table>
+</div>
+
+<div class="panel panel-primary">
+ <div class="panel-heading">Add a Train</div>
+ <div class="panel-body">
+   
+    <form>
+           <div class="form-group">
+              <label for="inputName">Train Name</label>
+           <input type="name" class="form-control" id="inputName" placeholder="">
+         </div>
+         <div class="form-group">
+              <label for="inputDestination">Destination</label>
+           <input type="destinaion" class="form-control" id="inputDestination" placeholder="">
+         </div>
+         <div class="form-group">
+              <label for="inputFirst">First Train Time </label>
+           <input type="inputFirst" class="form-control" id="inputFirst" placeholder="HH:MM (in military time)">
+         </div>
+         <div class="form-group">
+              <label for="inputFrequency">Frequency (min)</label>
+           <input type="frequency" class="form-control" id="inputFrequency" placeholder="MM">
+         </div>
+         <button type="submit" id="submit-button" class="btn btn-primary">Submit</button>
+    </form>
+
+ </div>
+</div>
 
 
 
 
 <footer class="footer col-md-12"> © Heather Seaman 2017 </footer>
-
+<script src="https://www.gstatic.com/firebasejs/3.6.5/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyClkf_SodS2q_c7NIhd7NVoBUBl7QhuEWM",
+    authDomain: "train-time-63b94.firebaseapp.com",
+    databaseURL: "https://train-time-63b94.firebaseio.com",
+    storageBucket: "train-time-63b94.appspot.com",
+    messagingSenderId: "910194884615"
+  };
+  firebase.initializeApp(config);
+</script>
 <script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="assets/javascript/moment.min.js"></script> 
 <script type="text/javascript" src="assets/javascript/game.js"></script> 
 </body>
 </html>
