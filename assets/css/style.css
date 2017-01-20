@@ -2,3 +2,6 @@
 	box-sizing: border-box; 
 }
 
+thead {
+	background-color: snow;
+}
